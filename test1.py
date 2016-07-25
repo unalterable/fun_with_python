@@ -13,20 +13,6 @@ hello()
 
 print '######2'
 
-import test_module
+from test_module import * 
 
-print '######3'
-
-a = test_module.module_method()
-
-print '######4'
-
-print a #this is nothing as #module_method() returns nothing
-
-print '######5'
-
-a = test_module.module_method
-
-print '######6'
-
-a()
+module_method()
