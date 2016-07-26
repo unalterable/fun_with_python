@@ -19,4 +19,5 @@ def Main():
   background.start()
   background.join()
 
-Main()
+if __name__ == '__main__':
+  Main()
