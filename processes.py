@@ -6,18 +6,18 @@ Spawning processes is a bit slower than spawning threads. Once they are running,
 
 
 import os
-
-def child():
-    pid = os.getpid()
-    print "We are in the child process with PID= %d"%pid
+import time
 
 
-def parent():
+def parent(parent_delay):
     print "We are in the parent process with PID= %d"%os.getpid()
     newRef=os.fork()
+    print newRef
     if newRef==0:
-        child()
+      pid = os.getpid()
+      print "We are in the child process with PID= %d"%pid
     else:
-        print "We are in the parent process and our child process has PID= %d"%newRef
+      time.sleep(parent_delay)
+      print "We are in the parent process and our child process has PID= %d"%newRef
 
-parent()
+parent(0.1)
