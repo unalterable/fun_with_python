@@ -8,7 +8,9 @@ Spawning processes is a bit slower than spawning threads. Once they are running,
 import os
 
 def child():
-    print "We are in the child process with PID= %d"%os.getpid()
+    pid = os.getpid()
+    print "We are in the child process with PID= %d"%pid
+
 
 def parent():
     print "We are in the parent process with PID= %d"%os.getpid()
