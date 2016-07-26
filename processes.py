@@ -9,7 +9,8 @@ import os
 import time
 
 
-def parent(parent_delay):
+
+def parent(parent_delay, child_delay):
     print "We are in the parent process with PID= %d"%os.getpid()
     newRef=os.fork()
     '''
@@ -18,9 +19,10 @@ def parent(parent_delay):
     print newRef
     if newRef==0:
       pid = os.getpid()
+      time.sleep(child_delay)
       print "We are in the child process with PID= %d"%pid
     else:
       time.sleep(parent_delay)
       print "We are in the parent process and our child process has PID= %d"%newRef
 
-parent(0.1)
+parent(0.1,0.2)
