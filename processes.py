@@ -12,6 +12,9 @@ import time
 def parent(parent_delay):
     print "We are in the parent process with PID= %d"%os.getpid()
     newRef=os.fork()
+    '''
+    When you call os.fork, you create a new process that is an exact copy of the existing process except that in the original process, fork returns the process ID of the new (child) process, and in the new process, fork returns 0. This difference is how you can do something different in the parent and in the child.
+    '''
     print newRef
     if newRef==0:
       pid = os.getpid()
