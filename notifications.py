@@ -7,6 +7,5 @@ def sendmessage(message, title='Notification: '):
   
   return
 
-if __name__ == '__main__':
-  sendmessage('hello')
+sendmessage('hello')
 
