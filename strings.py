@@ -3,6 +3,8 @@ class StringManipulation:
   def append1(self, string1, string2):
     return string1 + string2
 
+  def slice1(self, string1, int1):
+    return string1[0:int1]
 
 if __name__ == '__main__':
   
