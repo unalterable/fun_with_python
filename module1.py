@@ -13,6 +13,6 @@ hello()
 
 print '######2'
 
-from test_module import * 
+from module import * 
 
 module_method()
