@@ -1,9 +1,5 @@
-import sys
-sys.path.append('../')
-from strings import StringManipulation
-
-
 import unittest
+from strings import StringManipulation
 
 class StringTests(unittest.TestCase):
 
